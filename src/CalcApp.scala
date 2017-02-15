@@ -4,6 +4,5 @@
 object CalcApp {
   def main(args: Array[String]): Unit = {
 
-
   }
 }

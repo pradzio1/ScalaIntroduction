@@ -1,18 +1,23 @@
 /**
   * Created by radix on 2/15/17.
   */
-class DoubleStack() {
-  def this(H: DoubleStackElem, E: Double)
-  val head: DoubleStackElem = _
+class DoubleStack(H: DoubleStackElem) {
+  def this() {
+    this(null)
+  }
 
-  def Top: Double = head.elem
+  val Head: DoubleStackElem = H
+
+  def Top: Double = H.elem
 
   def Push(e: Double): DoubleStack = {
-    head match {
-      case ??? =>
-        val temp: DoubleStackElem = new DoubleStackElem(head, e)
-
-      case _ => head = new DoubleStackElem(null, e)
+    H match {
+      case null => new DoubleStack(new DoubleStackElem(null, e))
+      case _ => new DoubleStack(new DoubleStackElem(H, e))
     }
+  }
+
+  def Pop(): DoubleStack = {
+    new DoubleStack(H.next)
   }
 }

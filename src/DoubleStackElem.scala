@@ -1,7 +1,8 @@
 /**
   * Created by radix on 2/15/17.
   */
-class DoubleStackElem(next: DoubleStackElem, _elem: Double) {
+class DoubleStackElem(_next: DoubleStackElem, _elem: Double) {
   val elem: Double = _elem
+  val next: DoubleStackElem = _next
 
 }

@@ -1,8 +1,8 @@
 /**
   * Created by radix on 2/15/17.
   */
-class DoubleStack(_head: DoubleStackElem) {
-  val head: DoubleStackElem = new DoubleStackElem(_)
+class DoubleStack() {
+  val head: DoubleStackElem = _
 
   def Top: Double = head.elem
 
@@ -14,6 +14,4 @@ class DoubleStack(_head: DoubleStackElem) {
       case _ => head = new DoubleStackElem(null, e)
     }
   }
-}
-
 }

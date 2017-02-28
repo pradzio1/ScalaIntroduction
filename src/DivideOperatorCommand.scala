@@ -1,15 +1,15 @@
 /**
-  * Created by radix on 2/15/17.
+  * Created by radix on 28.02.2017.
   */
 
-class AddOperatorCommand extends Command {
+class DivideOperatorCommand {
   def execute(s: DoubleStack): Unit = {
     if (s.StackSize >= 2) {
       val x1: Double = s.Top
       s.Pop()
       val x2: Double = s.Top
       s.Pop()
-      s.Push(x1 + x2)
+      s.Push(x2 / x1)
     }
   }
 }
